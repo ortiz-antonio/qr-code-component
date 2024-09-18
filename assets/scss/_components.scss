@@ -1,0 +1,48 @@
+@import 'base';
+
+.qr {
+  inline-size: 100%;
+  max-width: 20em;
+  padding: $space-200 $space-200 $space-500 $space-200;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 5px 15px 10px 2px rgba(0, 0, 0, 0.1);
+
+  &__art--img {
+    inline-size: 100%;
+    border-radius: 10px;
+  }
+
+  &__header {
+    margin-inline: $space-200;
+
+    &--title {
+      margin-block: $space-300 $space-200;
+      @extend %font-title;
+      color: $color-primary;
+    }
+
+    &--description {
+      @extend %font-text;
+      color: $color-secondary;
+    }
+  }
+}
+
+.footer {
+  margin-top: $space-500;
+}
+
+.attribution {
+  &__content {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+
+    &--fm,
+    &--ortiz {
+      color: $color-primary;
+    }
+  }
+}

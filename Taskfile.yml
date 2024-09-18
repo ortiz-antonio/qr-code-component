@@ -1,0 +1,30 @@
+version: '3'
+
+tasks:
+  build:
+    sources:
+      - index.pug
+      - includes/*.pug
+      - assets/scss/*.scss
+    cmds:
+      - yarn parcel build {{.TASKFILE_DIR}}/*.pug --dist-dir {{.TASKFILE_DIR}}/dist --no-source-maps --no-optimize
+
+  dev:
+    cmds:
+      - yarn parcel {{.TASKFILE_DIR}}/index.pug --dist-dir {{.TASKFILE_DIR}}/dist --no-source-maps
+
+  public:
+    sources:
+      - dist/
+    cmds:
+      - mkdir -p public
+      - rm -r public/
+      - cp -r dist/ public/
+
+  prettier:
+    sources:
+      - public/*.html
+      - public/*.css
+    cmds:
+      - yarn prettier {{.TASKFILE_DIR}}/public/*.html --write
+      - yarn prettier {{.TASKFILE_DIR}}/public/*.css --write

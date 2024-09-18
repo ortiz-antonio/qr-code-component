@@ -1,0 +1,108 @@
+// Import math functions from Sass library (assuming you have it installed)
+@use 'sass:math';
+
+// Import font from Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+// Josh's Custom CSS Reset (consider importing as a separate SCSS file)
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* stylelint-disable-next-line selector-id-pattern */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+// Define variables
+$color-primary: #1f314f;
+$color-secondary: #68778d;
+$color-bg: #d5e1ef;
+
+$space-200: 1em;
+$space-300: 1.5em;
+$space-500: 2.5em;
+
+$font-family: Outfit, sans-serif;
+$base-font-size: 16; //in px
+
+// Define functions for converting pixel values to em and rem units
+@function pxToEm($value) {
+  @debug $value;
+  @debug $base-font-size;
+  $emValue: math.div($value, $base-font-size) + em;
+  @return $emValue;
+}
+
+@function pxToRem($value) {
+  $remValue: math.div($value, $base-font-size) + rem;
+  @return $remValue;
+}
+
+// Define mixin for setting font properties
+@mixin font($size, $weight, $line-height, $letter-spacing) {
+  font-size: pxToEm($size);
+  font-weight: $weight;
+  line-height: $line-height;
+  letter-spacing: pxToEm($letter-spacing);
+}
+
+// Define mixin for centering content flexbox
+@mixin center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
+
+%font-title {
+  @include font(22, 700, 1.2, 0);
+}
+
+%font-text {
+  @include font(15, 400, 1.4, 0.2);
+}
