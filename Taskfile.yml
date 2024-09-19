@@ -26,6 +26,7 @@ tasks:
       - git add . && git commit -am "deploy qr-code-component"
       - git subtree push --prefix public origin deploy
       - git checkout main
+      - git branch -D deploy
 
   format_deploy:
     deps: [build]
