@@ -19,6 +19,8 @@ tasks:
       - dist/*
     cmds:
       - git checkout deploy
+      - task: build
+      - task: format_deploy
       - mkdir -p public && touch public/deletme
       - rm -r public/*
       - cp -r dist/ public/
@@ -26,7 +28,7 @@ tasks:
       - git subtree push --prefix public origin deploy
       - git checkout main
 
-  prettier:
+  format_deploy:
     sources:
       - public/*.html
       - public/*.css
