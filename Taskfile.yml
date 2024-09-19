@@ -18,10 +18,10 @@ tasks:
     sources:
       - dist/*
     cmds:
+      - git checkout deploy
       - mkdir -p public && touch public/deletme
       - rm -r public/*
       - cp -r dist/ public/
-      - git checkout deploy
       - git add . && git commit -am "deploy qr-code-component"
       - git subtree push --prefix public origin deploy
       - git checkout main
