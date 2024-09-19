@@ -15,12 +15,11 @@ tasks:
 
     # depends on setup - git branch deploy
   deploy:
+    deps: [format_deploy]
     sources:
       - dist/*
     cmds:
       - git checkout deploy
-      - task: build
-      - task: format_deploy
       - mkdir -p public && touch public/deletme
       - rm -r public/*
       - cp -r dist/ public/
@@ -29,6 +28,7 @@ tasks:
       - git checkout main
 
   format_deploy:
+    deps: [build]
     sources:
       - public/*.html
       - public/*.css
