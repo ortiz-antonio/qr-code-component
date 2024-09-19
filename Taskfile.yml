@@ -12,7 +12,6 @@ tasks:
   dev:
     cmds:
       - yarn parcel {{.TASKFILE_DIR}}/index.pug --dist-dir {{.TASKFILE_DIR}}/dist --no-source-maps
-    # depends on setup - git branch deploy
     sources:
       - dist/
 
