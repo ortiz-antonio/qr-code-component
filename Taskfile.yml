@@ -16,17 +16,32 @@ tasks:
     sources:
       - dist/
 
-  deploy:
+  public:
+    deps: [build]
+    sources:
+      - dist/*
     cmds:
-      - mkdir -p public
       - rm -r public/*
-      - cp -r dist/ public/
+      - cp -r dist/* public/
+      - task: format
+        vars: { SUB_DIR: public/ }
+
+      # - git subtree push --prefix public origin -u deploy
+
+      #setup predeploy create remote branch deploy and sources in public
+
+  deploy:
+    deps: [public, setup_deploy]
+    cmds:
       - git subtree push --prefix public origin -u deploy
 
-  prettier:
+  setup_deploy:
+    cmds:
+      - git push origin deploy:deploy
+
+  format:
     sources:
       - public/*.html
       - public/*.css
     cmds:
-      - yarn prettier {{.TASKFILE_DIR}}/public/*.html --write
-      - yarn prettier {{.TASKFILE_DIR}}/public/*.css --write
+      - prettier {{.ROOT_DIR}}/{{.SUB_DIR}} --write --config ../../.prettierrc
