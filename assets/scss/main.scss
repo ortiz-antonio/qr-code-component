@@ -1,12 +1,8 @@
 @import 'base';
 @import 'components';
+@import 'layout';
 
 body {
   font-family: $font-family;
   background-color: $color-bg;
-  @include center-content;
-}
-
-main {
-  // ... rest of your main styles
 }
