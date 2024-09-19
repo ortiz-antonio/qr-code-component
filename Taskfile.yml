@@ -7,21 +7,19 @@ tasks:
       - includes/*.pug
       - assets/scss/*.scss
     cmds:
-      - yarn parcel build {{.TASKFILE_DIR}}/*.pug --dist-dir {{.TASKFILE_DIR}}/dist --no-source-maps --no-optimize --public-url .
+      - yarn parcel build {{.TASKFILE_DIR}}/*.pug --dist-dir {{.TASKFILE_DIR}}/build --no-source-maps --no-optimize --public-url .
 
   dev:
     cmds:
-      - yarn parcel {{.TASKFILE_DIR}}/index.pug --dist-dir {{.TASKFILE_DIR}}/dist --no-source-maps
-    sources:
-      - dist/
+      - yarn parcel {{.TASKFILE_DIR}}/index.pug --dist-dir {{.TASKFILE_DIR}}/dist
 
   public:
     deps: [build]
     sources:
-      - dist/*
+      - build/*
     cmds:
-      - rm -r public/*
-      - cp -r dist/* public/
+      # - rm -r public/*
+      - cp -r build/* public/
       - task: format
         vars: { SUB_DIR: public/ }
 
