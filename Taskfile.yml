@@ -13,13 +13,18 @@ tasks:
     cmds:
       - yarn parcel {{.TASKFILE_DIR}}/index.pug --dist-dir {{.TASKFILE_DIR}}/dist --no-source-maps
 
-  public:
+    # depends on setup - git branch deploy
+  deploy:
     sources:
-      - dist/
+      - dist/*
     cmds:
-      - mkdir -p public
-      - rm -r public/
+      - mkdir -p public && touch public/deletme
+      - rm -r public/*
       - cp -r dist/ public/
+      - git checkout deploy
+      - git add . && git commit -am "deploy qr-code-component"
+      - git subtree push --prefix public origin deploy
+      - git checkout main
 
   prettier:
     sources:
