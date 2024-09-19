@@ -12,24 +12,16 @@ tasks:
   dev:
     cmds:
       - yarn parcel {{.TASKFILE_DIR}}/index.pug --dist-dir {{.TASKFILE_DIR}}/dist --no-source-maps
-
     # depends on setup - git branch deploy
-  deploy:
-    deps: [format_deploy]
     sources:
-      - dist/*
+      - dist/
     cmds:
-      - git checkout deploy
-      - mkdir -p public && touch public/deletme
+      - mkdir -p public
       - rm -r public/*
       - cp -r dist/ public/
-      - git add . && git commit -am "deploy qr-code-component"
-      - git subtree push --prefix public origin deploy
-      - git checkout main
-      - git branch -D deploy
+      - git subtree push --prefix public origin -u deploy
 
-  format_deploy:
-    deps: [build]
+  prettier:
     sources:
       - public/*.html
       - public/*.css
