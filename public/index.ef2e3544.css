@@ -107,15 +107,12 @@ h6 {
   color: #1f314f;
 }
 
-main {
+body {
+  background-color: #d5e1ef;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100%;
-  display: flex;
-}
-
-body {
-  background-color: #d5e1ef;
   font-family: Outfit, sans-serif;
+  display: flex;
 }

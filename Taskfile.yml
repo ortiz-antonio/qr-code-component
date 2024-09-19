@@ -7,7 +7,8 @@ tasks:
       - includes/*.pug
       - assets/scss/*.scss
     cmds:
-      - yarn parcel build {{.TASKFILE_DIR}}/*.pug --dist-dir {{.TASKFILE_DIR}}/build --no-source-maps --no-optimize --public-url .
+      - rm -r build
+      - yarn parcel build {{.TASKFILE_DIR}}/*.pug --dist-dir {{.TASKFILE_DIR}}/build --no-source-maps --no-optimize   --no-content-hash --public-url .
 
   dev:
     cmds:
