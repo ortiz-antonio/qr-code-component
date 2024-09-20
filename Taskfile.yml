@@ -19,7 +19,7 @@ tasks:
       - yarn parcel {{.TASKFILE_DIR}}/index.pug --dist-dir {{.TASKFILE_DIR}}/dist --no-source-maps
 
   deploy:
-    deps: [public]
+    deps: [build]
     cmds:
       - git subtree push --prefix public origin deploy
 
