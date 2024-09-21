@@ -2,7 +2,10 @@
 @use 'sass:math';
 
 // Import font from Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+@font-face {
+  font-family: Outfit;
+  src: url('../fonts/Outfit/Outfit-VariableFont_wght.ttf');
+}
 
 // Josh's Custom CSS Reset (consider importing as a separate SCSS file)
 *,
