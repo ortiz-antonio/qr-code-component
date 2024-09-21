@@ -1,4 +1,11 @@
-@import 'https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap';
+@font-face {
+  font-family: Outfit;
+  src: url(Outfit-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: Outfit;
+  src: url(Outfit-VariableFont_wght.ttf);
+}
 *,
 :before,
 :after {
