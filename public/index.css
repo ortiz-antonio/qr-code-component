@@ -1,9 +1,11 @@
 @font-face {
   font-family: Outfit;
+  font-display: swap;
   src: url(Outfit-VariableFont_wght.ttf);
 }
 @font-face {
   font-family: Outfit;
+  font-display: swap;
   src: url(Outfit-VariableFont_wght.ttf);
 }
 *,
