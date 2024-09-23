@@ -1,6 +1,7 @@
 @import 'base';
 
 .qr {
+  margin: $space-500;
   inline-size: 100%;
   max-width: 20em;
   padding: $space-200 $space-200 $space-500 $space-200;

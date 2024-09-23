@@ -8,59 +8,6 @@
   src: url('../fonts/Outfit/Outfit-VariableFont_wght.ttf');
 }
 
-// Josh's Custom CSS Reset (consider importing as a separate SCSS file)
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-}
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
-/* stylelint-disable-next-line selector-id-pattern */
-#root,
-#__next {
-  isolation: isolate;
-}
-
 // Define variables
 $color-primary: #1f314f;
 $color-secondary: #68778d;
@@ -100,7 +47,7 @@ $base-font-size: 16; //in px
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100%;
+  min-height: 100svh;
 }
 
 %font-title {
