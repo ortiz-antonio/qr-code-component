@@ -1,4 +1,5 @@
 // center all page
 .container {
   @include center-content;
+  margin: $space-500;
 }
