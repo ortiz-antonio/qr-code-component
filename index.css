@@ -1,13 +1,3 @@
-@font-face {
-  font-family: Outfit;
-  font-display: swap;
-  src: url(Outfit-VariableFont_wght.ttf);
-}
-@font-face {
-  font-family: Outfit;
-  font-display: swap;
-  src: url(Outfit-VariableFont_wght.ttf);
-}
 *,
 :before,
 :after {
@@ -51,6 +41,16 @@ h6 {
 #__next {
   isolation: isolate;
 }
+@font-face {
+  font-family: Outfit;
+  font-display: swap;
+  src: url(Outfit-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: Outfit;
+  font-display: swap;
+  src: url(Outfit-VariableFont_wght.ttf);
+}
 .qr__header--title {
   letter-spacing: 0;
   font-size: 1.375em;
@@ -69,6 +69,7 @@ h6 {
   background-color: #fff;
   border-radius: 20px;
   max-width: 20em;
+  margin: 2.5em;
   padding: 1em 1em 2.5em;
   box-shadow: 5px 15px 10px 2px #0000001a;
 }
@@ -98,12 +99,14 @@ h6 {
 .attribution__content--ortiz {
   color: #1f314f;
 }
-body {
-  background-color: #d5e1ef;
+.container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100%;
-  font-family: Outfit, sans-serif;
+  min-height: 100svh;
   display: flex;
+}
+body {
+  background-color: #d5e1ef;
+  font-family: Outfit, sans-serif;
 }
