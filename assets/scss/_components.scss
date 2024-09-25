@@ -35,9 +35,10 @@
 }
 
 .attribution {
+  text-align: center;
   &__content {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 1em;
 
     &--fm,
