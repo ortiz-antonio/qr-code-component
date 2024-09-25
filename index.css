@@ -85,8 +85,11 @@ h6 {
 .footer {
   margin-top: 2.5em;
 }
+.attribution {
+  text-align: center;
+}
 .attribution__content {
-  flex-direction: row;
+  flex-direction: column;
   gap: 1em;
   display: flex;
 }
