@@ -2,7 +2,7 @@
 
 .qr {
   inline-size: 100%;
-  max-width: 20em;
+  max-width: 320px;
   padding: $space-200 $space-200 $space-500 $space-200;
   text-align: center;
   background-color: #fff;
@@ -32,7 +32,7 @@
 
 // footer
 .footer {
-  margin-top: $space-500;
+  margin-top: $space-m-10;
 }
 
 .attribution {
@@ -42,7 +42,6 @@
 .attribution__content {
   display: flex;
   flex-direction: column;
-  gap: 1em;
 }
 
 .attribution__content--fm,
