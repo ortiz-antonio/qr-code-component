@@ -47,13 +47,13 @@ h6 {
   font-display: swap;
   src: url(Outfit-VariableFont_wght.ttf);
 }
-.qr__header--title {
+.qr__body--title {
   letter-spacing: 0;
   font-size: 1.375em;
   font-weight: 700;
   line-height: 1.2;
 }
-.qr__header--description {
+.qr__body--description {
   letter-spacing: 0.0125em;
   font-size: 0.9375em;
   font-weight: 400;
@@ -72,15 +72,13 @@ h6 {
   border-radius: 10px;
   inline-size: 100%;
 }
-.qr__header {
-  margin-inline: 1rem;
-}
-.qr__header--title {
+.qr__body--title {
   color: #1f314f;
   margin-block: 1.5rem 1rem;
 }
-.qr__header--description {
+.qr__body--description {
   color: #68778d;
+  margin-inline: 1rem;
 }
 .footer {
   margin-top: 10px;

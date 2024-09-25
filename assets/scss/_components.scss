@@ -15,19 +15,20 @@
   border-radius: 10px;
 }
 
-.qr__header {
-  margin-inline: $space-200;
+.qr__body {
+  // margin-inline: $space-200;
 }
 
-.qr__header--title {
+.qr__body--title {
   margin-block: $space-300 $space-200;
   @extend %font-title;
   color: $color-primary;
 }
 
-.qr__header--description {
-  @extend %font-text;
+.qr__body--description {
+  @extend %font-body;
   color: $color-secondary;
+  margin-inline: $space-200;
 }
 
 // footer

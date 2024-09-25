@@ -55,6 +55,6 @@ $base-font-size: 16; //in px
   @include font(22, 700, 1.2, 0);
 }
 
-%font-text {
+%font-body {
   @include font(15, 400, 1.4, 0.2);
 }
