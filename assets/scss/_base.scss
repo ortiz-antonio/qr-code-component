@@ -13,7 +13,6 @@ $color-primary: #1f314f;
 $color-secondary: #68778d;
 $color-bg: #d5e1ef;
 
-$space-m-10: 10px;
 $space-200: 1rem;
 $space-300: 1.5rem;
 $space-500: 2.5rem;
@@ -23,8 +22,6 @@ $base-font-size: 16; //in px
 
 // Define functions for converting pixel values to em and rem units
 @function pxToEm($value) {
-  @debug $value;
-  @debug $base-font-size;
   $emValue: math.div($value, $base-font-size) + em;
   @return $emValue;
 }

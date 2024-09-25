@@ -1,8 +1,10 @@
 @import 'base';
 
 .qr {
+  margin: 2px;
   inline-size: 100%;
   max-width: 320px;
+  min-width: 170px;
   padding: $space-200 $space-200 $space-500 $space-200;
   text-align: center;
   background-color: #fff;
@@ -16,7 +18,7 @@
 }
 
 .qr__body {
-  // margin-inline: $space-200;
+  margin-inline: $space-200;
 }
 
 .qr__body--title {
@@ -28,12 +30,11 @@
 .qr__body--description {
   @extend %font-body;
   color: $color-secondary;
-  margin-inline: $space-200;
 }
 
 // footer
 .footer {
-  margin-top: $space-m-10;
+  margin-top: $space-200;
 }
 
 .attribution {
