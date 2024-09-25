@@ -64,7 +64,9 @@ h6 {
   inline-size: 100%;
   background-color: #fff;
   border-radius: 20px;
+  min-width: 170px;
   max-width: 320px;
+  margin: 2px;
   padding: 1rem 1rem 2.5rem;
   box-shadow: 5px 15px 10px 2px #0000001a;
 }
@@ -72,16 +74,18 @@ h6 {
   border-radius: 10px;
   inline-size: 100%;
 }
+.qr__body {
+  margin-inline: 1rem;
+}
 .qr__body--title {
   color: #1f314f;
   margin-block: 1.5rem 1rem;
 }
 .qr__body--description {
   color: #68778d;
-  margin-inline: 1rem;
 }
 .footer {
-  margin-top: 10px;
+  margin-top: 1rem;
 }
 .attribution {
   text-align: center;
@@ -99,7 +103,6 @@ h6 {
   justify-content: center;
   align-items: center;
   min-height: 100svh;
-  padding: 10px;
   display: flex;
 }
 body {
