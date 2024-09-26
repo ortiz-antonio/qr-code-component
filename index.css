@@ -42,11 +42,6 @@ h6 {
   font-display: swap;
   src: url(Outfit-VariableFont_wght.ttf);
 }
-@font-face {
-  font-family: Outfit;
-  font-display: swap;
-  src: url(Outfit-VariableFont_wght.ttf);
-}
 .qr__body--title {
   letter-spacing: 0;
   font-size: 1.375em;
@@ -64,13 +59,13 @@ h6 {
   inline-size: 100%;
   background-color: #fff;
   border-radius: 20px;
-  min-width: 170px;
-  max-width: 320px;
-  margin: 0.5px;
+  min-width: 10.625rem;
+  max-width: 20rem;
+  margin: 1rem;
   padding: 1rem 1rem 2.5rem;
   box-shadow: 5px 15px 10px 2px #0000001a;
 }
-.qr__art--img {
+.qr__img {
   border-radius: 10px;
   inline-size: 100%;
 }
