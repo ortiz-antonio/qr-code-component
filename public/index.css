@@ -59,7 +59,7 @@ h6 {
   background-color: #fff;
   border-radius: 20px;
   max-width: 20rem;
-  padding: clamp(0.2rem, 1600vw - 5120px, 1rem);
+  padding: 1rem;
   box-shadow: 5px 15px 10px 2px #0000001a;
 }
 .qr__img {

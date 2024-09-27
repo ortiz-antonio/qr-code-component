@@ -1,6 +1,6 @@
 .qr {
   max-width: pxToRem(320);
-  padding: responsiveSpace($space-200);
+  padding: $space-200;
 
   text-align: center;
   background-color: #fff;
@@ -13,7 +13,11 @@
 }
 
 .qr__body {
-  margin-inline: responsiveSpace($space-200);
+  margin-inline: clamp(
+    0.2rem,
+    calc(0rem + (16 - 0) * ((100vw - 320px) / (321 - 320))),
+    $space-200
+  );
 }
 
 .qr__body--title {
