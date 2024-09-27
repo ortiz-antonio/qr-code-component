@@ -31,6 +31,14 @@ $base-font-size: 16; //in px
   @return $remValue;
 }
 
+@function responsiveSpace($space) {
+  @return clamp(
+    0.2rem,
+    calc(0rem + (16 - 0) * ((100vw - 320px) / (321 - 320))),
+    $space
+  );
+}
+
 // Define mixin for setting font properties
 @mixin font($size, $weight, $line-height, $letter-spacing) {
   font-size: pxToEm($size);

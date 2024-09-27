@@ -59,14 +59,14 @@ h6 {
   background-color: #fff;
   border-radius: 20px;
   max-width: 20rem;
-  padding: 1rem;
+  padding: clamp(0.2rem, 1600vw - 5120px, 1rem);
   box-shadow: 5px 15px 10px 2px #0000001a;
 }
 .qr__img {
   border-radius: 10px;
 }
 .qr__body {
-  margin-inline: clamp(0.1rem, 17px - 1rem, 1rem);
+  margin-inline: clamp(0.2rem, 1600vw - 5120px, 1rem);
 }
 .qr__body--title {
   color: #1f314f;
