@@ -56,10 +56,11 @@ h6 {
 }
 .qr {
   text-align: center;
+  padding: 1rem;
   background-color: #fff;
   border-radius: 20px;
   max-width: 20rem;
-  padding: 1rem;
+  padding-block-end: 2.5rem;
   box-shadow: 5px 15px 10px 2px #0000001a;
 }
 .qr__img {
