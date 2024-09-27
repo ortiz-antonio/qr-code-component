@@ -15,7 +15,7 @@
 .qr__body {
   margin-inline: clamp(
     0rem,
-    calc(0rem + (1 - 0) * ((100vw - pxToRem(320)) / (pxToRem(320.1) - 20))),
+    calc(0rem + (1 - 0) * ((100vw - pxToRem(320)) / (pxToRel(321) - 20))),
     1rem
   );
 }

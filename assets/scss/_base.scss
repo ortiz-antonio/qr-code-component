@@ -21,14 +21,21 @@ $font-family: Outfit, sans-serif;
 $base-font-size: 16; //in px
 
 // Define functions for converting pixel values to em and rem units
+
+@function pxToRel($value, $unit: '') {
+  $relValue: math.div($value, $base-font-size) + $unit;
+  @if $unit == '' {
+    $relValue: math.div($value, $base-font-size);
+  }
+  @return $relValue;
+}
+
 @function pxToEm($value) {
-  $emValue: math.div($value, $base-font-size) + em;
-  @return $emValue;
+  @return pxToRel($value, em);
 }
 
 @function pxToRem($value) {
-  $remValue: math.div($value, $base-font-size) + rem;
-  @return $remValue;
+  @return pxToRel($value, rem);
 }
 
 // Define mixin for setting font properties

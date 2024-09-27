@@ -67,11 +67,7 @@ h6 {
   border-radius: 10px;
 }
 .qr__body {
-  margin-inline: clamp(
-    0rem,
-    0rem + 1 * (100vw - 20rem)/ (20.0063rem - 20),
-    1rem
-  );
+  margin-inline: clamp(0rem, 1600vw - 320rem, 1rem);
 }
 .qr__body--title {
   color: #1f314f;
