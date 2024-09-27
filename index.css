@@ -56,20 +56,17 @@ h6 {
 }
 .qr {
   text-align: center;
-  inline-size: 100%;
   background-color: #fff;
   border-radius: 20px;
-  min-width: 8.75rem;
   max-width: 20rem;
-  padding: 1rem 1rem 2.5rem;
+  padding: 1rem;
   box-shadow: 5px 15px 10px 2px #0000001a;
 }
 .qr__img {
   border-radius: 10px;
-  inline-size: 100%;
 }
 .qr__body {
-  margin-inline: 1rem;
+  margin-inline: clamp(0.1rem, 17px - 1rem, 1rem);
 }
 .qr__body--title {
   color: #1f314f;
@@ -77,6 +74,7 @@ h6 {
 }
 .qr__body--description {
   color: #68778d;
+  margin: 1rem 0;
 }
 .footer {
   margin-top: 1rem;
