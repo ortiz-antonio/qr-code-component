@@ -1,8 +1,6 @@
 .qr {
-  inline-size: 100%;
   max-width: pxToRem(320);
-  min-width: pxToRem(140);
-  padding: $space-200 $space-200 $space-500 $space-200;
+  padding: $space-200;
   text-align: center;
   background-color: #fff;
   border-radius: 20px;
@@ -10,12 +8,11 @@
 }
 
 .qr__img {
-  inline-size: 100%;
   border-radius: 10px;
 }
 
 .qr__body {
-  margin-inline: $space-200;
+  margin-inline: clamp(0.1rem, calc(17px - 1rem), $space-200);
 }
 
 .qr__body--title {
@@ -25,6 +22,8 @@
 }
 
 .qr__body--description {
+  margin: $space-200 0;
+
   @extend %font-body;
   color: $color-secondary;
 }
