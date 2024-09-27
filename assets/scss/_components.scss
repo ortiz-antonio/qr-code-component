@@ -14,9 +14,9 @@
 
 .qr__body {
   margin-inline: clamp(
-    0.2rem,
-    calc(0rem + (16 - 0) * ((100vw - 320px) / (321 - 320))),
-    $space-200
+    0rem,
+    calc(0rem + (1 - 0) * ((100vw - pxToRem(320)) / (pxToRem(320.1) - 20))),
+    1rem
   );
 }
 
