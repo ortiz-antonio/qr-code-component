@@ -5,7 +5,7 @@
 @use '../base/typography';
 
 .qr {
-  max-width: functions.pxToRem(320px);
+  max-width: #{var(--container-max-width)};
   padding: #{var(--space-200)};
   padding-block-end: #{var(--space-500)};
   text-align: center;

@@ -1,6 +1,8 @@
 @use '../abstracts/functions';
 
 :root {
+  --container-max-width: #{functions.pxToRem(320px)};
+
   --color-primary: #1f314f;
   --color-secondary: #68778d;
   --color-bg: #d5e1ef;
