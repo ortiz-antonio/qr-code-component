@@ -1,17 +1,14 @@
 @use 'sass:math';
 
-@function pxToRel($value, $unit: '') {
-  $relValue: math.div($value, $base-font-size) + $unit;
-  @if $unit == '' {
-    $relValue: math.div($value, $base-font-size);
-  }
+@function pxToRel($value, $base-font-size: 16px) {
+  $relValue: math.div($value, $base-font-size);
   @return $relValue;
 }
 
 @function pxToEm($value) {
-  @return pxToRel($value, em);
+  @return pxToRel($value) * 1em;
 }
 
 @function pxToRem($value) {
-  @return pxToRel($value, rem);
+  @return pxToRel($value) * 1rem;
 }

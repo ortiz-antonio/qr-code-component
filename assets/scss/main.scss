@@ -1,16 +1,9 @@
-@import 'base/reset';
-@import 'base/typography';
+@use 'abstracts/variables';
 
-@import 'abstracts/variables';
-@import 'abstracts/functions';
-@import 'abstracts/mixins';
+@use 'base/reset';
+@use 'base/typography';
 
-@import 'layout/layout';
+@use 'layout/layout';
 
-@import 'components/footer';
-@import 'components/qr';
-
-body {
-  font-family: $font-family;
-  background-color: $color-bg;
-}
+@use 'components/qr';
+@use 'components/footer';

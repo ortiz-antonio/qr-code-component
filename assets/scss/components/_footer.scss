@@ -1,5 +1,7 @@
+@use '../abstracts/variables';
+
 .footer {
-  margin-top: $space-200;
+  margin-top: #{var(--space-200)};
 }
 
 .attribution {
@@ -13,5 +15,5 @@
 
 .attribution__content--fm,
 .attribution__content--ortiz {
-  color: $color-primary;
+  color: #{var(--color-primary)};
 }

@@ -1,4 +1,5 @@
-// center all page
+@use '../abstracts/mixins';
+
 .container {
-  @include center-content;
+  @include mixins.center-content;
 }

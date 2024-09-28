@@ -1,7 +1,13 @@
+@use '../abstracts/variables';
+@use '../abstracts/functions';
+@use '../abstracts/mixins';
+
+@use '../base/typography';
+
 .qr {
-  max-width: pxToRem(320);
-  padding: $space-200;
-  padding-block-end: $space-500;
+  max-width: functions.pxToRem(320px);
+  padding: #{var(--space-200)};
+  padding-block-end: #{var(--space-500)};
   text-align: center;
   background-color: #fff;
   border-radius: 20px;
@@ -15,20 +21,24 @@
 .qr__body {
   margin-inline: clamp(
     0rem,
-    calc(0rem + (1 - 0) * ((100vw - pxToRem(320)) / (pxToRel(321) - 20))),
-    1rem
+    calc(
+      0rem + (1 - 0) *
+        (
+          (100vw - functions.pxToRem(320px)) /
+            (functions.pxToRel(321px) - functions.pxToRel(320px))
+        )
+    ),
+    #{var(--space-200)}
   );
 }
 
 .qr__body--title {
-  margin-block: $space-300 $space-200;
-  @extend %font-title;
-  color: $color-primary;
+  margin-block: #{var(--space-300)} #{var(--space-200)};
+  @include mixins.font-title;
 }
 
 .qr__body--description {
-  margin: $space-200 0;
+  margin: #{var(--space-200)} 0;
 
-  @extend %font-body;
-  color: $color-secondary;
+  @include mixins.font-body;
 }
