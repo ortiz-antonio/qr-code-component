@@ -1,7 +1,14 @@
-@import 'reset';
-@import 'base';
-@import 'components';
-@import 'layout';
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+
+@import 'base/reset';
+@import 'base/typography';
+
+@import 'layout/layout';
+
+@import 'components/footer';
+@import 'components/qr';
 
 body {
   font-family: $font-family;

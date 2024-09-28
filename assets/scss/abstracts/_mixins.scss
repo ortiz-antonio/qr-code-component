@@ -1,0 +1,24 @@
+// Define mixin for setting font properties
+@mixin font($size, $weight, $line-height, $letter-spacing) {
+  font-size: pxToEm($size);
+  font-weight: $weight;
+  line-height: $line-height;
+  letter-spacing: pxToEm($letter-spacing);
+}
+
+// Define mixin for centering content flexbox
+@mixin center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+}
+
+%font-title {
+  @include font(22, 700, 1.2, 0);
+}
+
+%font-body {
+  @include font(15, 400, 1.4, 0.2);
+}

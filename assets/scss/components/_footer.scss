@@ -1,0 +1,17 @@
+.footer {
+  margin-top: $space-200;
+}
+
+.attribution {
+  text-align: center;
+}
+
+.attribution__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.attribution__content--fm,
+.attribution__content--ortiz {
+  color: $color-primary;
+}
