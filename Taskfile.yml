@@ -6,6 +6,7 @@ tasks:
       - index.pug
       - includes/*.pug
       - assets/scss/*.scss
+      - assets/scss/**/*.scss
     cmds:
       - rm -rf public
       - mv .git .git.bk #Plugins doesn't work if a have a .git in a subdir
