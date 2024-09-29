@@ -5,6 +5,7 @@
 @use '../base/typography';
 
 .qr {
+  margin: 0.5vh;
   max-width: #{var(--container-max-width)};
   padding: #{var(--space-200)};
   padding-block-end: #{var(--space-500)};

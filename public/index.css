@@ -1,4 +1,5 @@
 :root {
+  --container-max-width: 20rem;
   --color-primary: #1f314f;
   --color-secondary: #68778d;
   --color-bg: #d5e1ef;
@@ -74,11 +75,12 @@ body {
   display: flex;
 }
 .qr {
+  max-width: var(--container-max-width);
   padding: var(--space-200);
   text-align: center;
   background-color: #fff;
   border-radius: 20px;
-  max-width: 20rem;
+  margin: 0.5vh;
   padding-block-end: var(--space-500);
   box-shadow: 5px 15px 10px 2px #0000001a;
 }
@@ -88,7 +90,7 @@ body {
 .qr__body {
   margin-inline: clamp(
     0rem,
-    0rem + 1 * (100vw - 20rem)/0.0625,
+    0rem + 1 * (100vw - var(--container-max-width))/0.01,
     var(--space-200)
   );
 }
