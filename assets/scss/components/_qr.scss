@@ -5,7 +5,7 @@
 @use '../base/typography';
 
 .qr {
-  margin: 0.5vh;
+  margin: #{var(--container-margin)};
   max-width: #{var(--container-max-width)};
   padding: #{var(--space-200)};
   padding-block-end: #{var(--space-500)};
@@ -34,6 +34,5 @@
 
 .qr__body--description {
   margin: #{var(--space-200)} 0;
-
   @include mixins.font-body;
 }

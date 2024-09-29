@@ -75,12 +75,12 @@ body {
   display: flex;
 }
 .qr {
+  margin: var(--container-margin);
   max-width: var(--container-max-width);
   padding: var(--space-200);
   text-align: center;
   background-color: #fff;
   border-radius: 20px;
-  margin: 0.5vh;
   padding-block-end: var(--space-500);
   box-shadow: 5px 15px 10px 2px #0000001a;
 }
