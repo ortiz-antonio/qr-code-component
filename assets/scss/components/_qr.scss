@@ -21,13 +21,7 @@
 .qr__body {
   margin-inline: clamp(
     0rem,
-    calc(
-      0rem + (1 - 0) *
-        (
-          (100vw - functions.pxToRem(320px)) /
-            (functions.pxToRel(321px) - functions.pxToRel(320px))
-        )
-    ),
+    calc(0rem + (1 - 0) * ((100vw - #{var(--container-max-width)}) / (0.01))),
     #{var(--space-200)}
   );
 }
