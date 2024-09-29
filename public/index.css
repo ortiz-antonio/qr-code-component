@@ -83,6 +83,20 @@ body {
   min-height: 100svh;
   display: flex;
 }
+.footer {
+  margin-top: var(--space-200);
+}
+.attribution {
+  text-align: center;
+}
+.attribution__content {
+  flex-direction: column;
+  display: flex;
+}
+.attribution__content--fm,
+.attribution__content--ortiz {
+  color: var(--color-primary);
+}
 .qr {
   margin: var(--container-margin);
   max-width: var(--container-max-width);
@@ -118,18 +132,4 @@ body {
   line-height: var(--font-body-line-height);
   letter-spacing: var(--font-body-letter-space);
   color: var(--font-body-color);
-}
-.footer {
-  margin-top: var(--space-200);
-}
-.attribution {
-  text-align: center;
-}
-.attribution__content {
-  flex-direction: column;
-  display: flex;
-}
-.attribution__content--fm,
-.attribution__content--ortiz {
-  color: var(--color-primary);
 }
