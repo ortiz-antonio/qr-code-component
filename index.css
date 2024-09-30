@@ -1,9 +1,6 @@
 :root {
   --container-margin: 0.5vh;
   --container-max-width: 20rem;
-  --color-primary: #1f314f;
-  --color-secondary: #68778d;
-  --color-bg: #d5e1ef;
   --space-200: 1rem;
   --space-300: 1.5rem;
   --space-500: 2.5rem;
@@ -13,12 +10,10 @@
   --font-title-weight: 700;
   --font-title-line-height: 1.2;
   --font-title-letter-spacing: 0;
-  --font-title-color: var(--color-primary);
   --font-body-size: 0.9375rem;
   --font-body-weight: 400;
   --font-body-line-height: 1.4;
   --font-body-letter-spacing: 0.0125em;
-  --font-body-color: var(--color-secondary);
 }
 *,
 :before,
@@ -75,7 +70,7 @@ h6 {
 }
 body {
   font-family: var(--font-family);
-  background-color: var(--color-bg);
+  background-color: #d5e1ef;
 }
 .container {
   flex-direction: column;
@@ -96,7 +91,7 @@ body {
 }
 .attribution__content--fm,
 .attribution__content--ortiz {
-  color: var(--color-primary);
+  color: #1f314f;
 }
 .qr {
   margin: var(--container-margin);
@@ -120,17 +115,17 @@ body {
 }
 .qr__body--title {
   margin-block: var(--space-300) var(--space-200);
-  font-size: var(--font-title-size);
-  font-weight: var(--font-title-weight);
-  line-height: var(--font-title-line-height);
-  letter-spacing: var(--font-title-letter-space);
-  color: var(--font-title-color);
+  weight: 700;
+  letter-spacing: 0;
+  color: #1f314f;
+  font-size: 1.375rem;
+  line-height: 1.2;
 }
 .qr__body--description {
   margin: var(--space-200) 0;
-  font-size: var(--font-body-size);
-  font-weight: var(--font-body-weight);
-  line-height: var(--font-body-line-height);
-  letter-spacing: var(--font-body-letter-space);
-  color: var(--font-body-color);
+  weight: 400;
+  letter-spacing: 0.0125rem;
+  color: #68778d;
+  font-size: 0.9375rem;
+  line-height: 1.4;
 }
