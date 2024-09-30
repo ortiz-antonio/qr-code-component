@@ -1,12 +1,27 @@
-@use '../abstracts/variables';
+@use '../abstracts/functions';
 
-@font-face {
-  font-family: Outfit;
-  font-display: swap;
-  src: url('../fonts/Outfit/Outfit-VariableFont_wght.ttf');
+$settings: (
+  'title': (
+    font-size: #{functions.pxToRem(22px)},
+    weight: 700,
+    line-height: 1.2,
+    letter-spacing: 0,
+  ),
+  'body': (
+    font-size: #{functions.pxToRem(15px)},
+    weight: 400,
+    line-height: 1.4,
+    letter-spacing: #{functions.pxToRem(0.2px)},
+  ),
+);
+
+@function get-setting($property, $size) {
+  @return map-get(map-get($settings, $size), $property);
 }
 
-body {
-  font-family: #{var(--font-family)};
-  background-color: #{var(--color-bg)};
+@mixin size($size) {
+  font-size: get-setting('font-size', $size);
+  weight: get-setting('weight', $size);
+  line-height: get-setting('line-height', $size);
+  letter-spacing: get-setting('letter-spacing', $size);
 }

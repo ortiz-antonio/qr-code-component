@@ -1,8 +1,8 @@
 @use '../abstracts/variables';
-@use '../abstracts/functions';
-@use '../abstracts/mixins';
 
 @use '../base/typography';
+
+@use '../themes/theme';
 
 .qr {
   margin: #{var(--container-margin)};
@@ -10,7 +10,7 @@
   padding: #{var(--space-200)};
   padding-block-end: #{var(--space-500)};
   text-align: center;
-  background-color: #fff;
+  background-color: #{theme.color('card-background')};
   border-radius: 20px;
   box-shadow: 5px 15px 10px 2px rgba(0, 0, 0, 0.1);
 }
@@ -29,10 +29,12 @@
 
 .qr__body--title {
   margin-block: #{var(--space-300)} #{var(--space-200)};
-  @include mixins.font-title;
+  @include typography.size('title');
+  color: theme.color('primary');
 }
 
 .qr__body--description {
   margin: #{var(--space-200)} 0;
-  @include mixins.font-body;
+  @include typography.size('body');
+  color: theme.color('accent');
 }

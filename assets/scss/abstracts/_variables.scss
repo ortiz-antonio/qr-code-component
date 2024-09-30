@@ -4,10 +4,6 @@
   --container-margin: 0.5vh;
   --container-max-width: #{functions.pxToRem(320px)};
 
-  --color-primary: #1f314f;
-  --color-secondary: #68778d;
-  --color-bg: #d5e1ef;
-
   --space-200: 1rem;
   --space-300: 1.5rem;
   --space-500: 2.5rem;
@@ -20,11 +16,9 @@
   --font-title-weight: 700;
   --font-title-line-height: 1.2;
   --font-title-letter-spacing: 0;
-  --font-title-color: #{var(--color-primary)};
 
   --font-body-size: #{functions.pxToRem(15px)};
   --font-body-weight: 400;
   --font-body-line-height: 1.4;
   --font-body-letter-spacing: #{functions.pxToEm(0.2px)};
-  --font-body-color: #{var(--color-secondary)};
 }
