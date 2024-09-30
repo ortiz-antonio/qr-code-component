@@ -1,0 +1,21 @@
+@use '../abstracts/variables';
+
+$theme-colors: (
+  'primary': (
+    'light': #1f314f,
+  ),
+  'accent': (
+    'light': #68778d,
+  ),
+  'background': (
+    'light': #d5e1ef,
+  ),
+  'card-background': (
+    'light': #ffffff,
+  ),
+);
+
+@function color($key: 'primary', $variant: 'light') {
+  $map: map-get($theme-colors, $key);
+  @return map-get($map, $variant);
+}

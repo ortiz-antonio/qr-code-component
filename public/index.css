@@ -6,14 +6,6 @@
   --space-500: 2.5rem;
   --font-family: Outfit, sans-serif;
   --base-font-size: 16px;
-  --font-title-size: 1.375rem;
-  --font-title-weight: 700;
-  --font-title-line-height: 1.2;
-  --font-title-letter-spacing: 0;
-  --font-body-size: 0.9375rem;
-  --font-body-weight: 400;
-  --font-body-line-height: 1.4;
-  --font-body-letter-spacing: 0.0125em;
 }
 *,
 :before,
