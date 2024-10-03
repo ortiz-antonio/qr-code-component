@@ -6,7 +6,7 @@
   padding: #{var(--space-200)};
   padding-block-end: #{var(--space-500)};
   text-align: center;
-  background-color: #{theme.color('card-background')};
+  background-color: #{theme.color('background')};
   border-radius: 20px;
   box-shadow: 5px 15px 10px 2px rgba(0, 0, 0, 0.1);
 }

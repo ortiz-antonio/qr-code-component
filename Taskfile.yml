@@ -9,9 +9,9 @@ tasks:
       - src/scss/**/*.scss
     cmds:
       - rm -rf public
-      - mv .git .git.bk #Plugins doesn't work if a have a .git in a subdir
+      # - mv .git .git.bk #Plugins doesn't work if a have a .git in a subdir
       - bunx parcel build {{.TASKFILE_DIR}}/src/*.pug --dist-dir {{.TASKFILE_DIR}}/public --no-source-maps --no-cache --public-url .
-      - mv .git.bk .git #I'm investigating why
+      # - mv .git.bk .git #I'm investigating why
       - task: format
         vars: { SUB_DIR: public/ }
 

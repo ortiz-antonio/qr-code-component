@@ -1,15 +1,17 @@
+@use '../utils/variables';
+
 $theme-colors: (
   'primary': (
-    'light': #1f314f,
+    'light': #{var(--primary)},
   ),
   'accent': (
-    'light': #68778d,
+    'light': #{var(--accent)},
   ),
   'background': (
-    'light': #d5e1ef,
+    'light': #{var(--background)},
   ),
-  'card-background': (
-    'light': #ffffff,
+  'page-background': (
+    'light': #{var(--page-background)},
   ),
 );
 

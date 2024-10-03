@@ -17,7 +17,7 @@
 
 body {
   font-family: #{var(--font-family)};
-  background-color: theme.color('background');
+  background-color: theme.color('page-background');
   padding: 2px;
 }
 

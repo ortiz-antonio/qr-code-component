@@ -1,5 +1,10 @@
 @use 'src/scss/utils/functions';
 
+$color-slate-900: #1f314f;
+$color-slate-500: #68778d;
+$color-slate-300: #d5e1ef;
+$color-white: #ffff;
+
 :root {
   --container-max-width: #{functions.pxToRem(320px)};
 
@@ -8,4 +13,10 @@
   --space-500: 2.5rem;
 
   --font-family: Outfit, sans-serif;
+
+  // colors
+  --primary: #{$color-slate-900};
+  --accent: #{$color-slate-500};
+  --background: #{$color-white};
+  --page-background: #{$color-slate-300};
 }
