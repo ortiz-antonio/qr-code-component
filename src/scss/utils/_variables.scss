@@ -1,7 +1,6 @@
 @use 'src/scss/utils/functions';
 
 :root {
-  --container-margin: 0.5vh;
   --container-max-width: #{functions.pxToRem(320px)};
 
   --space-200: 1rem;
