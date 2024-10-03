@@ -1,17 +1,18 @@
 @use 'src/scss/utils/functions';
+@use '../utils/variables';
 
 $settings: (
   'title': (
-    font-size: #{functions.pxToRem(22px)},
-    weight: 700,
-    line-height: 1.2,
-    letter-spacing: 0,
+    font-size: #{var(--title-font-size)},
+    weight: #{var(--title-weight)},
+    line-height: #{var(--title-line-height)},
+    letter-spacing: #{var(--title-letter-spacing)},
   ),
   'body': (
-    font-size: #{functions.pxToRem(15px)},
-    weight: 400,
-    line-height: 1.4,
-    letter-spacing: #{functions.pxToRem(0.2px)},
+    font-size: #{var(--body-font-size)},
+    weight: #{var(--body-weight)},
+    line-height: #{var(--body-line-height)},
+    letter-spacing: #{var(--body-letter-spacing)},
   ),
 );
 

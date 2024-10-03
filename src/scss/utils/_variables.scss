@@ -19,4 +19,15 @@ $color-white: #ffff;
   --accent: #{$color-slate-500};
   --background: #{$color-white};
   --page-background: #{$color-slate-300};
+
+  // typography
+  --title-font-size: #{functions.pxToRem(22px)};
+  --title-weight: 700;
+  --title-line-height: 1.2;
+  --title-letter-spacing: 0;
+
+  --body-font-size: #{functions.pxToRem(15px)};
+  --body-weight: 400;
+  --body-line-height: 1.4;
+  --body-letter-spacing: #{functions.pxToRem(0.2px)};
 }
