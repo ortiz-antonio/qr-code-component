@@ -1,5 +1,4 @@
 :root {
-  --container-margin: 0.5vh;
   --container-max-width: 20rem;
   --space-200: 1rem;
   --space-300: 1.5rem;
@@ -62,6 +61,7 @@ h6 {
 body {
   font-family: var(--font-family);
   background-color: #d5e1ef;
+  padding: 2px;
 }
 .container {
   flex-direction: column;
@@ -74,7 +74,6 @@ body {
   margin-top: var(--space-200);
 }
 .qr {
-  margin: var(--container-margin);
   max-width: var(--container-max-width);
   padding: var(--space-200);
   text-align: center;
