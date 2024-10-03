@@ -3,21 +3,21 @@ version: '3'
 tasks:
   build:
     sources:
-      - index.pug
-      - includes/*.pug
-      - assets/scss/*.scss
-      - assets/scss/**/*.scss
+      - src/index.pug
+      - src/components/**/*.pug
+      - src/scss/*.scss
+      - src/scss/**/*.scss
     cmds:
       - rm -rf public
       - mv .git .git.bk #Plugins doesn't work if a have a .git in a subdir
-      - yarn parcel build {{.TASKFILE_DIR}}/*.pug --dist-dir {{.TASKFILE_DIR}}/public --no-source-maps --no-cache --public-url .
+      - bunx parcel build {{.TASKFILE_DIR}}/src/*.pug --dist-dir {{.TASKFILE_DIR}}/public --no-source-maps --no-cache --public-url .
       - mv .git.bk .git #I'm investigating why
       - task: format
         vars: { SUB_DIR: public/ }
 
   dev:
     cmds:
-      - yarn parcel {{.TASKFILE_DIR}}/index.pug --dist-dir {{.TASKFILE_DIR}}/dist --no-source-maps --host 0.0.0.0
+      - bunx parcel src/index.pug --dist-dir dist --no-source-maps --host 0.0.0.0
 
   deploy:
     deps: [build]

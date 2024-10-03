@@ -1,0 +1,6 @@
+mixin qr(content)
+  .qr
+    img.qr__img(src=content.img, alt=content.alt)
+    .qr__body
+      h2.qr__body--title= content.title
+      p.qr__body--description= content.description

@@ -1,0 +1,29 @@
+@use '../theme/theme';
+@use '../theme/typography';
+
+@mixin center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+}
+
+@font-face {
+  font-family: Outfit;
+  font-display: swap;
+  src: url('../../assets/fonts/Outfit/Outfit-VariableFont_wght.ttf');
+}
+
+body {
+  font-family: #{var(--font-family)};
+  background-color: theme.color('background');
+}
+
+.container {
+  @include center-content;
+}
+
+.footer {
+  margin-top: #{var(--space-200)};
+}

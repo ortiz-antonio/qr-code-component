@@ -1,8 +1,5 @@
-@use '../abstracts/variables';
-
-@use '../base/typography';
-
-@use '../themes/theme';
+@use '../../scss/theme/theme';
+@use '../../scss/theme/typography';
 
 .qr {
   margin: #{var(--container-margin)};

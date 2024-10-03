@@ -1,9 +1,5 @@
-@use '../abstracts/variables';
-@use '../themes/theme';
-
-.footer {
-  margin-top: #{var(--space-200)};
-}
+@use '../../scss/theme/theme';
+@use '../../scss/theme/typography';
 
 .attribution {
   text-align: center;

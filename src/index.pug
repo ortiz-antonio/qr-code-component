@@ -1,0 +1,25 @@
+include components/qr/qr.pug
+
+doctype html
+html(lang='en')
+  head
+    title Frontend Mentor | QR code component
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(
+      name='description',
+      content='Frontend mentor qr component solution by ortiz'
+    )
+    link(
+      rel='icon',
+      href='../assets/images/favicon-32x32.png',
+      type='image/x-icon'
+    )
+    link(rel='stylesheet', type='text/css', href='../src/scss/main.scss')
+  body
+    .container
+      main
+        h1.visually-hidden QR Card Component
+        +qr({ img:"../assets/images/image-qr-code.png", alt:"QR Code to Frontend Mentor.io", title:"Improve your front-end skills by building projects", description:"Scan the QR code to visit Frontend Mentor and take your coding skills to the next level" })
+      footer.footer
+        include components/credits/credits.pug

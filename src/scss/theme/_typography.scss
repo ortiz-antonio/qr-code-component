@@ -1,4 +1,4 @@
-@use '../abstracts/functions';
+@use 'src/scss/utils/functions';
 
 $settings: (
   'title': (
@@ -21,7 +21,7 @@ $settings: (
 
 @mixin size($size) {
   font-size: get-setting('font-size', $size);
-  weight: get-setting('weight', $size);
+  font-weight: get-setting('weight', $size);
   line-height: get-setting('line-height', $size);
   letter-spacing: get-setting('letter-spacing', $size);
 }
