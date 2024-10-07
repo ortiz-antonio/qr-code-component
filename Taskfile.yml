@@ -34,11 +34,13 @@ tasks:
 
   build:assets:
     cmds:
-      - cp -r _includes/assets public/assets
+      - cp -r _includes/assets public/
 
   build:
     sources:
       - _includes
+      - index.njk
+
     cmds:
       - task: build:clean
       - pnpm eleventy
