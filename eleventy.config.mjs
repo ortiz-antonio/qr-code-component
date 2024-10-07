@@ -8,7 +8,7 @@ export default function (eleventyConfig) {
   )
 
   eleventyConfig.setLibrary('njk', nunjucksEnvironment)
-  eleventyConfig.addPassthroughCopy({ '_includes/assets': 'assets' })
+  eleventyConfig.addPassthroughCopy({ assets: 'assets' })
   return {
     dir: {
       // input: '_includes',
