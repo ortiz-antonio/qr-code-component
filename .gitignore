@@ -23,6 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 
-.parcel-cache
+#custom setup
 .task
-build
+pnpm-lock.yaml
+

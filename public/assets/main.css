@@ -17,32 +17,58 @@
   --body-line-height: 1.4;
   --body-letter-spacing: 0.0125rem;
 }
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
 *,
-:before,
-:after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
+
+/*
+  2. Remove default margin
+*/
 * {
   margin: 0;
 }
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
 body {
-  -webkit-font-smoothing: antialiased;
   line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
+
+/*
+  5. Improve media defaults
+*/
 img,
 picture,
 video,
 canvas,
 svg {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
+
+/*
+  6. Remove built-in form typography styles
+*/
 input,
 button,
 textarea,
 select {
   font: inherit;
 }
+
+/*
+  7. Avoid text overflows
+*/
 p,
 h1,
 h2,
@@ -52,58 +78,66 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
+
+/*
+  8. Create a root stacking context
+*/
 #root,
 #__next {
   isolation: isolate;
 }
+
 .visually-hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
   white-space: nowrap;
   width: 1px;
-  height: 1px;
-  position: absolute;
-  overflow: hidden;
 }
+
 @font-face {
   font-family: Outfit;
   font-display: swap;
-  src: url(Outfit-VariableFont_wght.ttf);
+  src: url("../../assets/fonts/Outfit/Outfit-VariableFont_wght.ttf");
 }
 body {
   font-family: var(--font-family);
   background-color: var(--page-background);
   padding: 2px;
 }
+
 .container {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100svh;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
 }
+
 .footer {
   margin-top: var(--space-200);
 }
+
 .qr {
   max-width: var(--container-max-width);
   padding: var(--space-200);
+  padding-block-end: var(--space-500);
   text-align: center;
   background-color: var(--background);
   border-radius: 20px;
-  padding-block-end: var(--space-500);
-  box-shadow: 5px 15px 10px 2px #0000001a;
+  box-shadow: 5px 15px 10px 2px rgba(0, 0, 0, 0.1);
 }
+
 .qr__img {
   border-radius: 10px;
 }
+
 .qr__body {
-  margin-inline: clamp(
-    0rem,
-    0rem + 1 * (100vw - var(--container-max-width))/0.01,
-    var(--space-200)
-  );
+  margin-inline: clamp(0rem, 0rem + 1 * (100vw - var(--container-max-width)) / 0.01, var(--space-200));
 }
+
 .qr__body--title {
   margin-block: var(--space-300) var(--space-200);
   font-size: var(--title-font-size);
@@ -112,6 +146,7 @@ body {
   letter-spacing: var(--title-letter-spacing);
   color: var(--primary);
 }
+
 .qr__body--description {
   margin: var(--space-200) 0;
   font-size: var(--body-font-size);
@@ -120,13 +155,16 @@ body {
   letter-spacing: var(--body-letter-spacing);
   color: var(--accent);
 }
+
 .attribution {
   text-align: center;
 }
+
 .attribution__content {
-  flex-direction: column;
   display: flex;
+  flex-direction: column;
 }
+
 .attribution__content--fm,
 .attribution__content--ortiz {
   color: var(--primary);

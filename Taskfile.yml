@@ -1,36 +1,81 @@
 version: '3'
 
 tasks:
-  build:
-    sources:
-      - src/index.pug
-      - src/components/**/*.pug
-      - src/scss/*.scss
-      - src/scss/**/*.scss
-    cmds:
-      - rm -rf public
-      # - mv .git .git.bk #Plugins doesn't work if a have a .git in a subdir
-      - bunx parcel build {{.TASKFILE_DIR}}/src/*.pug --dist-dir {{.TASKFILE_DIR}}/public --no-source-maps --no-cache --public-url .
-      # - mv .git.bk .git #I'm investigating why
-      - task: format
-        vars: { SUB_DIR: public/ }
+  default:
+    - echo "first use task install"
+    - echo "Then you can use dev format deploy"
 
   dev:
+    deps:
+      - task: dev:serve
+      - task: dev:sass
+
+  dev:serve:
     cmds:
-      - bunx parcel src/index.pug --dist-dir dist --no-source-maps --host 0.0.0.0
+      - pnpm eleventy --serve
+    daemon: true
+    silent: false
+
+  dev:sass:
+    cmds:
+      - pnpm sass --watch _includes/src/scss:public/assets --no-source-map
+    daemon: true
+    silent: false
+
+  build:clean:
+    sources:
+      - public
+    cmds:
+      - rm -rf public
+
+  build:sass:
+    cmds:
+      - pnpm sass _includes/src/scss:public/assets --no-source-map
+
+  build:assets:
+    cmds:
+      - cp -r _includes/assets public/assets
+
+  build:
+    sources:
+      - _includes
+    cmds:
+      - task: build:clean
+      - pnpm eleventy
+      - task: build:sass
+      - task: build:assets
+      - task: format
 
   deploy:
-    deps: [build]
+    deps: [format]
     cmds:
       - git subtree push --prefix public origin deploy
 
-  setup_deploy:
-    cmds:
-      - git push origin deploy:deploy
-
   format:
     sources:
-      - public/*.html
-      - public/*.css
+      - _includes
+      - public
+      - index.njk
     cmds:
-      - prettier {{.ROOT_DIR}}/{{.SUB_DIR}} --write --config ../../.prettierrc
+      - prettier ./ --write
+
+  setup:
+    run: once
+    cmds:
+      - echo "Installing deps for project, volta, node, pnpm, prettier"
+      - |
+        if [[ "$OS" == "windows" ]]; then
+          winget install Volta.Volta
+        else
+          curl https://get.volta.sh | bash
+        fi
+      - volta install node
+      - volta install pnpm
+      - volta install prettier
+
+  install:
+    deps: [setup]
+    source: package.json
+    cmds:
+      - echo "Installing package.json deps"
+      - pnpm install

@@ -4,5 +4,5 @@
 @use 'base/helpers';
 @use 'base/base';
 
-@use '../components/qr/qr';
-@use '../components/credits/credits';
+@use '../partials/qr/qr';
+@use '../partials/credits/credits';

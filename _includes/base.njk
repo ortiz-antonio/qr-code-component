@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Frontend Mentor | {{ title }}</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Frontend mentor qr component solution by ortiz"
+    />
+    <link
+      rel="icon"
+      href="../assets/images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" type="text/css" href="/assets/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <main>
+        <h1 class="visually-hidden">QR Card Component</h1>
+
+        {{ content | safe }}
+      </main>
+      <footer class="footer">{% include "credits/credits.njk" %}</footer>
+    </div>
+  </body>
+</html>

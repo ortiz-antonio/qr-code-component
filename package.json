@@ -1,0 +1,9 @@
+{
+  "name": "qr-code-component",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "nunjucks": "^3.2.4",
+    "prettier-plugin-jinja-template": "^2.0.0",
+    "sass": "^1.79.4"
+  }
+}

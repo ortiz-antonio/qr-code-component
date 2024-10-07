@@ -1,0 +1,14 @@
+---
+layout: base.njk
+title: QR Card Component
+---
+
+{% import "qr/qr.njk" as macro %}
+{{
+  macro.qr({
+    img: "assets/images/image-qr-code.png",
+    alt: "QR Code to Frontend Mentor.io",
+    title: "Improve your front-end skills by building projects",
+    description: "Scan the QR code to visit Frontend Mentor and take your coding skills to the next level"
+  })
+}}

@@ -1,0 +1,9 @@
+{% macro qr(content) %}
+  <div class="qr">
+    <img class="qr__img" src="{{ content.img }}" alt="{{ content.alt }}" />
+    <div class="qr__body">
+      <h2 class="qr__body--title">{{ content.title }}</h2>
+      <p class="qr__body--description">{{ content.description }}</p>
+    </div>
+  </div>
+{% endmacro %}
