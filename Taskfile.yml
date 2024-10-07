@@ -23,8 +23,6 @@ tasks:
     silent: false
 
   build:clean:
-    sources:
-      - public
     cmds:
       - rm -rf public
 
