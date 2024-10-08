@@ -15,14 +15,12 @@
   src: url('fonts/Outfit/Outfit-VariableFont_wght.ttf');
 }
 
-body {
+.container {
+  @include center-content;
+
   font-family: #{var(--font-family)};
   background-color: theme.color('page-background');
   padding: 2px;
-}
-
-.container {
-  @include center-content;
 }
 
 .footer {
