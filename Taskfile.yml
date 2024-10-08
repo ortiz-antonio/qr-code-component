@@ -34,6 +34,12 @@ tasks:
     cmds:
       - cp -r assets public/
 
+  build:lint:
+    sources:
+      - public/assets/main.css
+    cmds:
+      - pnpm stylelint public/assets/main.css --fix
+
   build:
     sources:
       - _includes
@@ -45,6 +51,7 @@ tasks:
       - task: build:sass
       - task: build:assets
       - task: lint
+      - task: build:lint
       - task: format
 
   deploy:
