@@ -8,7 +8,7 @@
   text-align: center;
   background-color: #{theme.color('background')};
   border-radius: 20px;
-  box-shadow: 5px 15px 10px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 15px 10px 2px rgb(0 0 0 / 10%);
 }
 
 .qr__img {
@@ -25,12 +25,16 @@
 
 .qr__body--title {
   margin-block: #{var(--space-300)} #{var(--space-200)};
+
   @include typography.size('title');
+
   color: theme.color('primary');
 }
 
 .qr__body--description {
   margin: #{var(--space-200)} 0;
+
   @include typography.size('body');
+
   color: theme.color('accent');
 }

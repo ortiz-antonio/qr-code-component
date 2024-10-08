@@ -3,15 +3,16 @@
 $base-font-size: 16px;
 
 // Unit functions
-@function pxToRel($value) {
-  $relValue: math.div($value, $base-font-size);
-  @return $relValue;
+@function px-to-rel($value) {
+  $rel-value: math.div($value, $base-font-size);
+
+  @return $rel-value;
 }
 
-@function pxToEm($value) {
-  @return pxToRel($value) * 1em;
+@function px-to-em($value) {
+  @return px-to-rel($value) * 1em;
 }
 
-@function pxToRem($value) {
-  @return pxToRel($value) * 1rem;
+@function px-to-rem($value) {
+  @return px-to-rel($value) * 1rem;
 }

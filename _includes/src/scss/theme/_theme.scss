@@ -1,3 +1,4 @@
+@use 'sass:map';
 @use '../utils/variables';
 
 $theme-colors: (
@@ -16,6 +17,7 @@ $theme-colors: (
 );
 
 @function color($key: 'primary', $variant: 'light') {
-  $map: map-get($theme-colors, $key);
-  @return map-get($map, $variant);
+  $map: map.get($theme-colors, $key);
+
+  @return map.get($map, $variant);
 }

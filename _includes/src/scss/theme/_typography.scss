@@ -1,3 +1,4 @@
+@use 'sass:map';
 @use '../utils/functions';
 @use '../utils/variables';
 
@@ -17,7 +18,9 @@ $settings: (
 );
 
 @function get-setting($property, $size) {
-  @return map-get(map-get($settings, $size), $property);
+  $map: map.get($settings, $size);
+
+  @return map.get($map, $property);
 }
 
 @mixin size($size) {

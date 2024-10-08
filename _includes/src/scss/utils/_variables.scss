@@ -6,13 +6,11 @@ $color-slate-300: #d5e1ef;
 $color-white: #ffff;
 
 :root {
-  --container-max-width: #{functions.pxToRem(320px)};
-
+  --container-max-width: #{functions.px-to-rem(320px)};
   --space-200: 1rem;
   --space-300: 1.5rem;
   --space-500: 2.5rem;
-
-  --font-family: Outfit, sans-serif;
+  --font-family: outfit, sans-serif;
 
   // colors
   --primary: #{$color-slate-900};
@@ -21,13 +19,12 @@ $color-white: #ffff;
   --page-background: #{$color-slate-300};
 
   // typography
-  --title-font-size: #{functions.pxToRem(22px)};
+  --title-font-size: #{functions.px-to-rem(22px)};
   --title-weight: 700;
   --title-line-height: 1.2;
   --title-letter-spacing: 0;
-
-  --body-font-size: #{functions.pxToRem(15px)};
+  --body-font-size: #{functions.px-to-rem(15px)};
   --body-weight: 400;
   --body-line-height: 1.4;
-  --body-letter-spacing: #{functions.pxToRem(0.2px)};
+  --body-letter-spacing: #{functions.px-to-em(0.2px)};
 }

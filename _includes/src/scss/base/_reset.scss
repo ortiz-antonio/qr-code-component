@@ -62,7 +62,10 @@ h6 {
 /*
   8. Create a root stacking context
 */
+
+/* stylelint-disable */
 #root,
 #__next {
   isolation: isolate;
 }
+/* stylelint-enable */

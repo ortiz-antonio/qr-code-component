@@ -44,6 +44,7 @@ tasks:
       - pnpm eleventy
       - task: build:sass
       - task: build:assets
+      - task: lint
       - task: format
 
   deploy:
@@ -58,6 +59,17 @@ tasks:
       - index.njk
     cmds:
       - prettier ./ --write
+
+  lint:
+    sources:
+      - _includes/src/scss/**/*.scss
+      - _includes/src/scss/*.scss
+      - _includes/src/partials/**/*.scss
+
+    cmds:
+      - pnpm stylelint _includes/src/scss/**/*.scss --fix
+      - pnpm stylelint _includes/src/scss/*.scss --fix
+      - pnpm stylelint _includes/src/partials/**/*.scss --fix
 
   setup:
     run: once

@@ -11,7 +11,6 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ assets: 'assets' })
   return {
     dir: {
-      // input: '_includes',
       output: 'public',
     },
   }
