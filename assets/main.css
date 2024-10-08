@@ -102,12 +102,7 @@ h6 {
 @font-face {
   font-family: Outfit;
   font-display: swap;
-  src: url('fonts/Outfit/Outfit-VariableFont_wght.ttf');
-}
-body {
-  font-family: var(--font-family);
-  background-color: var(--page-background);
-  padding: 2px;
+  src: url("fonts/Outfit/Outfit-VariableFont_wght.ttf");
 }
 
 .container {
@@ -116,6 +111,9 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100svh;
+  font-family: var(--font-family);
+  background-color: var(--page-background);
+  padding: 2px;
 }
 
 .footer {
@@ -129,7 +127,7 @@ body {
   text-align: center;
   background-color: var(--background);
   border-radius: 20px;
-  box-shadow: 5px 15px 10px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 15px 10px 2px rgb(0 0 0 / 10%);
 }
 
 .qr__img {
@@ -137,11 +135,7 @@ body {
 }
 
 .qr__body {
-  margin-inline: clamp(
-    0rem,
-    0rem + 1 * (100vw - var(--container-max-width)) / 0.01,
-    var(--space-200)
-  );
+  margin-inline: clamp(0rem, 0rem + 1 * (100vw - var(--container-max-width)) / 0.01, var(--space-200));
 }
 
 .qr__body--title {
